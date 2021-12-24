@@ -1,0 +1,141 @@
+body {
+  /* background: linear-gradient(#012d52, #011f38, #001527, #00060a); */
+  /* background: #00060a; */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  font-family: "Patrick Hand", cursive;
+  /* font-size: ; */
+  color: rgb(248, 229, 203);
+  font-size: 47px;
+  height: 100vh;
+  overflow: hidden;
+}
+/* 눈 */
+.snow {
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  background-image: url(./image/snow2.png);
+  background-size: 100%;
+  animation: snow 10s linear infinite;
+  margin-top: -15px;
+}
+
+.snow:nth-of-type(2n) {
+  width: 7px;
+  height: 7px;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+.snow:nth-of-type(2n + 1) {
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+.snow:nth-of-type(9n) {
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+@keyframes snow {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-15px, 20vh);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(15px, 40vh);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-15px, 60vh);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(0, 80vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100vh);
+  }
+}
+/* 메세지 */
+.wrap {
+  /* border: 1px solid red; */
+  text-align: center;
+  height: auto;
+  /* width: 375px; */
+  display: flex;
+  flex-direction: column;
+}
+.cute {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: rock;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+.wrap .santa {
+  /* border: 1px solid lime; */
+}
+.wrap .santa > img {
+  /* border: 1px solid skyblue; */
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+.wrap .tree {
+  /* border: 1px solid skyblue; */
+}
+.wrap .tree > img {
+  /* border: 1px solid lime; */
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+}
+@keyframes rock {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes rock2 {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+.message {
+  /* border-top: 7px solid rgb(75, 11, 11); */
+  box-sizing: border-box;
+  margin-top: 0;
+  /* border: 1px solid pink; */
+}
+.message * {
+  padding: 10px 0;
+}
+h1 {
+  animation: rock;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+h2 {
+  animation: rock2;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+#heart {
+  cursor: pointer;
+}
